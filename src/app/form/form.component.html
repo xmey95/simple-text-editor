@@ -1,0 +1,18 @@
+<div class="card margin-card">
+  <div class="card-header">
+      Simple Text Editor<button type="button" class="btn btn-danger margin-button btn-sm" (click)="reset()">Reset</button>
+  </div>
+  <div class="card-body">
+      <div class="form-group">
+          <label for="Title">Title</label>
+          <input type="text" [formControl]="title" class="form-control" placeholder="Enter Title...">
+      </div>
+      <div class="form-group">
+          <label for="Body">Body</label>
+          <textarea [formControl]="body" class="form-control" placeholder="Enter Body here..." rows="20"></textarea>
+      </div>
+      <p>
+        <button type="button" class="btn btn-success btn-lg btn-block" (click)="print()" [disabled]="title.invalid || body.invalid">Print</button>
+      </p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 pull-right">
+            <form-print (filled)="printed($event)"></form-print>
+        </div>
+        <div class="col-md-6 pull-left">
+            <preview [title_text]="text_title" [body_text]="text_body"></preview>
+        </div>
+    </div>
+</div>
